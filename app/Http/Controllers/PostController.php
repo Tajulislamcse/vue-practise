@@ -10,9 +10,14 @@ class PostController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+      if($request->ajax()){
+        $posts = Post::all();
+        return response()->json(['posts'=>$posts],200);
+      }
+      return view('index');
+
     }
 
     /**
@@ -60,6 +65,6 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
     }
 }
