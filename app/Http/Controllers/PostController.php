@@ -25,7 +25,6 @@ class PostController extends Controller
      */
     public function create()
     {
-        dd('tesh');
         return view('create');
     }
 
