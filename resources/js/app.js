@@ -14,9 +14,10 @@ import { createApp } from 'vue';
  */
 
 const app = createApp({});
-
+import { ZiggyVue } from "../../vendor/tightenco/ziggy/dist/vue.m";
 import ExampleComponent from './components/ExampleComponent.vue';
 app.component('example-component', ExampleComponent);
+app.use(ZiggyVue);
 
 /**
  * The following block of code may be used to automatically register your

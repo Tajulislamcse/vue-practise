@@ -1,4 +1,5 @@
 <template>
+    <a :href="route('posts.create')">Create Post</a>
   <table>
     <tr>
         <th>Title</th>
